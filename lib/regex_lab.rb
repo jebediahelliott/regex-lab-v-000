@@ -15,9 +15,10 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.scan(/[0-9]{10}/) == true
-    return true
-  elsif phone.scan == []
-    return false
-  end
+  phone.each do |number|
+    if number.match(/\d{10}/) == nil
+      return false
+    else
+      return true
+    end
 end
